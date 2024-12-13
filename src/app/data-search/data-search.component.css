@@ -1,3 +1,13 @@
+.data-container {
+  height: 100%;
+  max-height: 700px;
+  overflow: auto;
+}
+
+.mat-column-name {
+  height: 100px;
+}
+
 .mat-selection-list {
   /*height: 150px;*/ /* Set the height of the selection list */
   max-height: 150px; /* Optional: Use this if you want a maximum height */
@@ -9,9 +19,14 @@
   padding: 5px 10px; /* Optional: Adjust padding for each item to reduce the item height */
 }
 
+table {
+  max-height: 500px !important;
+  overflow: auto !important;
+}
 
 .mat-table {
   width: 100%;
+
 }
 
 .mat-header-cell, .mat-cell {

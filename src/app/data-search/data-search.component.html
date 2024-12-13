@@ -19,7 +19,7 @@
         </div>
     </form>
     <mat-spinner *ngIf="show_spinner"></mat-spinner>
-    <div *ngIf="dataSource && dataSource.length > 0">
+    <div *ngIf="dataSource && dataSource.length > 0" class="data-container">
         <button (click)="downloadCSV()" mat-raised-button extended color="warn" type="button"><mat-icon>file_download</mat-icon>Export</button>
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
