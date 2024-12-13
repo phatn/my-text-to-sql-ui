@@ -1,0 +1,22 @@
+body {
+  position: relative;
+  min-height: 100%;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+
+#main-container {
+  padding: 2rem 10rem 0 10rem;
+}
+
+html {
+  height: 100%;
+}
+
+body  {
+  position: relative;
+}

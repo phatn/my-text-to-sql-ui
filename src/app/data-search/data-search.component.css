@@ -1,0 +1,237 @@
+.mat-selection-list {
+  /*height: 150px;*/ /* Set the height of the selection list */
+  max-height: 150px; /* Optional: Use this if you want a maximum height */
+  overflow-y: auto; /* Enable vertical scrolling if the content exceeds the height */
+  z-index: 9999 !important; /* Ensure the selection list appears above other elements */
+}
+
+.mat-list-option {
+  padding: 5px 10px; /* Optional: Adjust padding for each item to reduce the item height */
+}
+
+
+.mat-table {
+  width: 100%;
+}
+
+.mat-header-cell, .mat-cell {
+  max-width: 150px; /* Adjust this based on the width you want for the cells */
+  overflow: auto;
+}
+
+.mat-cell {
+  max-height: 50px; /* Set a maximum height for the cell */
+}
+
+.scrollable-cell-content {
+  display: block; /* Make content inside cell block-level to allow scrolling */
+  max-width: 100%;
+  max-height: 100%; /* Allow content to fill available cell height */
+  overflow-x: auto; /* Enable horizontal scroll */
+  overflow-y: auto; /* Enable vertical scroll */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+
+#search-bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.search-field {
+  flex: 50%;
+  /*margin-right: 0.1rem;*/
+}
+
+.search-field-location {
+  flex: 10%;
+}
+
+.search-button {
+  flex: 15%;
+}
+
+.search-button button {
+  margin-top: 0.2rem;
+  padding: 0.5rem 4.5rem 0.5rem 4.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .search-field {
+    flex: 50%;
+    /*margin-right: 0.1rem;*/
+  }
+
+  .search-field-location {
+    flex: 10%;
+  }
+
+  .search-button {
+    flex: 15%;
+  }
+
+  .search-button button {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .search-field {
+    flex: 50%;
+    /*margin-right: 0.1rem;*/
+  }
+
+  .search-field-location {
+    flex: 10%;
+  }
+
+  .search-button {
+    flex: 15%;
+  }
+
+  .search-button button {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .search-field {
+    flex: 40%;
+    /*margin-right: 0.1rem;*/
+  }
+
+  .search-field-location {
+    flex: 10%;
+  }
+
+  .search-button {
+    flex: 20%;
+  }
+
+  .search-button button {
+    padding: 0.5rem 5rem 0.5rem 5rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .search-field {
+    flex: 50%;
+    /*margin-right: 0.1rem;*/
+  }
+
+  .search-field-location {
+    flex: 10%;
+  }
+
+  .search-button {
+    flex: 15%;
+  }
+
+  .search-button button {
+    padding: 0.5rem 3rem 0.5rem 3rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .search-field {
+    flex: 80%;
+    /*margin-right: 0.1rem;*/
+  }
+
+  .search-button {
+    flex: 5%;
+  }
+
+  .search-button button {
+    padding: 0.5rem 4rem 0.5rem 4rem;
+  }
+
+}
+
+#search-bar mat-form-field {
+  width: 100%;
+}
+
+
+.job-card {
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+#search-result {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#job-result {
+  width: 30%;
+  overflow-y: scroll;
+  max-height: 51rem;
+  margin-bottom: 8rem;
+}
+
+p.job-short-description {
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 1rem;
+  max-height: 10rem;
+
+}
+
+#job-detail {
+  width: 67%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 0 1rem 1rem 1rem;
+  overflow-y: scroll;
+  max-height: 50rem;
+}
+
+.job-heading {
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.job-sub-heading {
+  font-weight: 600;
+}
+
+.job-info-item {
+  padding-bottom: 1rem;
+}
+
+.btn-apply-job {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.job-box {
+  border-bottom: 1px solid #c6c6c6;
+  padding: 1rem;
+}
+
+.apply-job-box {
+  padding-top: 1rem;
+  position: sticky;
+  top: 0;
+  background-color: #FFF;
+}
+
+.mat-card {
+  padding-left: 0;
+}
