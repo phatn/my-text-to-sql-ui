@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 
 import { environment } from '../../environments/environment';
 import {BehaviorSubject} from "rxjs";
@@ -21,20 +21,7 @@ export class UserService {
   }
 
   login(email: string, password: string) {
-    return this.http.post<{token:string}>(`${environment.apiUrl}/users/login`, { email, password});
-  }
-
-
-  handleLogin(email: string, password: string) {
-    return this.http.post<{success:boolean, fullname: string}>(`http://localhost:8000/login`, { email, password});
-  }
-
-  signup(formData: FormData) {
-    return this.http.post<{token:string}>(`${environment.apiUrl}/users`, formData);
-  }
-
-  persistToken(token: string) {
-    localStorage.setItem("TOKEN", token);
+    return this.http.post<{success:boolean, fullname: string}>(`${environment.apiUrl}/login`, { email, password});
   }
 
   clearToken() {

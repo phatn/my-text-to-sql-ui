@@ -3,31 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const globalVars = {
-  jobTypes : [
-    {value: 'Full-time'},
-    {value: 'Part-time'}
-  ],
 
-  jobStatuses : [
-    {value: 'Active'},
-    {value: 'Inactive'}
-  ],
-
-  applicationStatuses : [
-    {value: 'Viewed by employed'},
-    {value: 'Hired'},
-    {value: 'Rejected'},
-  ],
-
-  seekerStatuses : [
-    {value: 'Active'},
-    {value: 'Inactive'}
-  ],
-
-  employerStatuses : [
-    {value: 'Active'},
-    {value: 'Inactive'}
-  ],
 };
 
 /*

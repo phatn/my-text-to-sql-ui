@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   constructor(private title: Title) { }
 
   ngOnInit(): void {
-    this.title.setTitle(`MWA Job Portal`);
+    this.title.setTitle(`TCS Hackathon 2024`);
   }
 
 }
