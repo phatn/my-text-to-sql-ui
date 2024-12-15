@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {DataSearchService} from "./data-search.service";
 import {Data} from "./search.model";
 import {debounceTime, distinctUntilChanged, Observable, Subject, switchMap} from "rxjs";
@@ -27,7 +27,7 @@ export class DataSearchComponent implements OnInit {
     private searchText$ = new Subject<string>();
     constructor(private formBuilder: FormBuilder, private dataSearchService: DataSearchService) {
         this.searchForm = this.formBuilder.group({
-            query: new FormControl('')
+            query: ['', Validators.required]
         });
     }
 
@@ -65,11 +65,16 @@ export class DataSearchComponent implements OnInit {
         return (event.target as HTMLInputElement).value;
     }
 
+     getSuggestionValue(event: Event): string {
+        return (event.target as HTMLDivElement).textContent ?? "";
+    }
+
     suggest(keyword: string) {
         this.searchText$.next(keyword);
     }
 
     assignValueToInput(value: string) {
+        console.log("value: " + value)
         this.searchForm.setValue({query: value});
         this.searchText$.next('');
     }

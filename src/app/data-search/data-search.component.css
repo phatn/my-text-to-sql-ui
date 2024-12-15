@@ -1,6 +1,33 @@
+div.search-field {
+  position: relative;
+}
+
+div.suggestion {
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  position: absolute;
+  top: 3.5rem;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: white;
+}
+
+.suggestion div:first-child {
+  padding: 1rem 0 0.5rem 0.5rem;
+}
+
+.suggestion div {
+  padding: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.suggestion div:hover {
+  background: #f5f5f5;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
 .data-container {
-  height: 100%;
-  max-height: 650px;
+  height: 65vh;
   overflow: auto;
 }
 
@@ -19,14 +46,8 @@
   padding: 5px 10px; /* Optional: Adjust padding for each item to reduce the item height */
 }
 
-table {
-  max-height: 500px !important;
-  overflow: auto !important;
-}
-
 .mat-table {
   width: 100%;
-
 }
 
 .mat-header-cell, .mat-cell {

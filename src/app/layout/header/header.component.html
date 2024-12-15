@@ -1,14 +1,13 @@
-<header *ngIf="loginResult?.fullname">
+<header *ngIf="fullName">
 <mat-toolbar>
   <div id="nav-container">
     <div>
       <a mat-button><img src="../../../assets/img/logo.png" style="height: 3.6rem" /> </a>
     </div>
-    <div class="welcome" *ngIf="loginResult?.fullname">
-      <a mat-button>Welcome, {{loginResult?.fullname}}!</a>
+    <div class="welcome">
+      <a mat-button>Welcome, {{fullName}}!</a>
       <a mat-button color="warn" (click)="logout()">Logout</a>
     </div>
-
   </div>
 </mat-toolbar>
 </header>

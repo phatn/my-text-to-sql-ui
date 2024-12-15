@@ -9,11 +9,15 @@ import {BehaviorSubject} from "rxjs";
 })
 export class UserService {
 
-  private dataSubject = new BehaviorSubject<any>(null);
+  private dataSubject = new BehaviorSubject<any>(this.getData());
   data$ = this.dataSubject.asObservable();
 
   constructor(private http: HttpClient) {
     console.log(`${environment.apiUrl}`)
+  }
+
+  getData() {
+    return localStorage.getItem("TOKEN_NAME");
   }
 
   updateData(newData: any) {
