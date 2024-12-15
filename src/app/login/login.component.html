@@ -17,7 +17,7 @@
         </p>
 
         <div class="button">
-          <div></div>
+          <div><mat-spinner [diameter]="30" *ngIf="show_spinner"></mat-spinner></div>
           <button mat-raised-button color="primary" type="submit" [disabled]="!this.loginForm.valid" style="padding-left: 3rem; padding-right: 3rem">Login</button>
         </div>
         <mat-error *ngIf="(loginResult?.errorMessage)"><span class="error-message">{{loginResult?.errorMessage}}</span></mat-error>

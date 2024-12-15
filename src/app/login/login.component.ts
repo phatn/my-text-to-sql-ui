@@ -11,7 +11,7 @@ import {LoginResult} from "../layout/header/header.component";
     styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit, OnDestroy {
-
+    show_spinner = false;
     loginForm!: FormGroup;
     destroy$: Subject<boolean> = new Subject<boolean>();
     loginResult: LoginResult | undefined;
@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     login(): void {
         const {email, password} = this.loginForm.value;
+        this.show_spinner = true;
         this.userService.login(email, password).subscribe(
             (res) => {
                 const {success, fullname} = res;
@@ -49,6 +50,7 @@ export class LoginComponent implements OnInit, OnDestroy {
                 } else {
                     this.userService.updateData({errorMessage: 'Login failed', fullname: undefined});
                 }
+                this.show_spinner = false;
             }
         );
     }
