@@ -19,10 +19,10 @@ export class DataSearchService {
       item = query;
     }
     const body = {query: query};
-    return this.http.post<Data>(`http://localhost:8000/search`, {query: item});
+    return this.http.post<Data>(`${environment.apiUrl}/search`, {query: item});
   }
 
   suggest(keyword: any): Observable<string[]> {
-    return this.http.get<string[]>(`http://localhost:8000/suggestion?word=${keyword}`);
+    return this.http.get<string[]>(`${environment.apiUrl}/suggestion?word=${keyword}`);
   }
 }

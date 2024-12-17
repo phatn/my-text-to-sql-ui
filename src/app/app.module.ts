@@ -13,12 +13,14 @@ import {UserService} from "./login/user.service";
 import {AttachTokenInterceptor} from './attach-token.interceptor';
 import {DataSearchComponent} from './data-search/data-search.component';
 import {CommonModule} from "@angular/common";
+import { SplitCamelCasePipePipe } from './split-camel-case-pipe.pipe';
 
 @NgModule({
     declarations: [
         AppComponent,
         LoginComponent,
-        DataSearchComponent
+        DataSearchComponent,
+        SplitCamelCasePipePipe
     ],
     imports: [
         CommonModule,
@@ -34,7 +36,7 @@ import {CommonModule} from "@angular/common";
         UserService,
         {provide: HTTP_INTERCEPTORS, useClass: AttachTokenInterceptor, multi: true}
     ],
-    exports: [],
+    exports: [SplitCamelCasePipePipe],
     bootstrap: [AppComponent]
 })
 export class AppModule {
